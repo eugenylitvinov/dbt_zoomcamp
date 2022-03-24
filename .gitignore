@@ -211,3 +211,7 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# dbt
+target/
+logs/
+dbt_packages/
