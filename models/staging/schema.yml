@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+    - name: staging
+      database: healthy-dolphin-338706
+      schema: trip_data_all
+
+      tables:
+        - name: yellow_tripdata
+        - name: green_tripdata
+        - name: green_tripdata_external_table
+        - name: yellow_tripdata_external_table  
+
+sources:
+    - name: staging-e
+      database: healthy-dolphin-338706
+      schema: tripdata
+
+      tables:
+        - name: yellow_tripdata
+        - name: green_tripdata
+        - name: green_tripdata_external_table
+
+        
+# models:
+#     - name: my_first_dbt_model
+#       description: "A starter dbt model"
+#       columns:
+#           - name: id
+#             description: "The primary key for this table"
+#             tests:
+#                 - unique
+#                 - not_null
