@@ -3,7 +3,7 @@ version: 2
 macros:
   - name: get_payment_type_description
     description: >
-      Returns the corresponding description for a payment_type.
+      This macro receives a payment_type and returns the corresponding description.
     arguments:
       - name: payment_type
         type: int
