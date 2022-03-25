@@ -6,7 +6,8 @@ with trips_data as (
     select 
     -- Reveneue grouping 
     pickup_zone as revenue_zone,
-    date_trunc('month', pickup_datetime) as revenue_month, 
+    -- date_trunc('month', pickup_datetime) as revenue_month, 
+    date_trunc(pickup_datetime, month) as revenue_month,
     --Note: For BQ use instead: date_trunc(pickup_datetime, month) as revenue_month, 
 
     service_type, 
@@ -29,3 +30,6 @@ with trips_data as (
 
     from trips_data
     group by 1,2,3
+
+
+-- dbt build --select +dm_monthly_zone_revenue --var 'is_test_run: false'
