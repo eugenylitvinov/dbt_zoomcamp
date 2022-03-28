@@ -19,6 +19,7 @@ sources:
       tables:
         - name: yellow_tripdata
         - name: green_tripdata
+        - name: fhv
 #        - name: green_tripdata_external_table
 
         
@@ -205,3 +206,4 @@ models:
             description: Total amount of all tolls paid in trip.
           - name: Total_amount
             description: The total amount charged to passengers. Does not include cash tips.
+    - name: stg_fhv_tripdata
